@@ -2,6 +2,8 @@
 <launch>
     <!-- 将 Urdf 文件的内容加载到参数服务器 -->
     <param name="robot_description" command="$(find xacro)/xacro $(find gazebo_robot)src/urdf/xacro/gazebo_robot.xacro" />
+
+
     <!-- 启动 gazebo -->
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
  	<arg name="world_name" value="$(find gazebo_robot)/src/world/robot_wall.world" />
